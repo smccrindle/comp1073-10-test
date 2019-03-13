@@ -36,7 +36,10 @@
 			console.log(iScreamInc);
 		}
 		/* STEP 9: Build out the populateHeader() function */
-
+		function populateHeader(jsonObj) {
+			var headerH1 = document.createElement('h1');
+			headerH1.textContent = jsonObj.companyName;
+		}
 		/* STEP 10a: Assemble the showTopFlavors() function */
 
 			// STEP 10b: Bind the JSON topFlavors object to a var
