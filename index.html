@@ -69,7 +69,7 @@
 				p2.textContent = 'Type: ' + topFlavors[i].type;
 				// STEP 10f: Build a loop for the ingredients array in the JSON
 				var ingredients = topFlavors[i].ingredients;
-				for (var j; j < ingredients.length; j++) {
+				for (var j = 0; j < ingredients.length; j++) {
 					var listItem = document.createElement('li');
 					// Set text for each list item
 					listItem.textContent = ingredients[j];
