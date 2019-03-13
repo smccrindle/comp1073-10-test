@@ -35,6 +35,7 @@
 			var iScreamInc = request.response;
 			console.log(iScreamInc);
 			populateHeader(iScreamInc);
+			topFlavors(iScreamInc);
 		}
 		/* STEP 9: Build out the populateHeader() function */
 		function populateHeader(jsonObj) {
@@ -48,21 +49,29 @@
 			header.appendChild(headerPara);
 		}
 		/* STEP 10a: Assemble the showTopFlavors() function */
-
+		function topFlavors(jsonObj) {
 			// STEP 10b: Bind the JSON topFlavors object to a var
-
+			var topFlavors = jsonObj.topFlavors;
 			// STEP 10c: Loop through the topFlavors object
-
+			for (var i = 0; i < topFlavors.length; i++) {
 				// STEP 10d: build HTML elements for the content
-
+				var article = document.createElement('article');
+				var h2 = document.createElement('h2');
+				var img = document.createElement('img');
+				var p1 = document.createElement('p');
+				var p2 = document.createElement('p');
+				var list = document.createElement('ul');
 				// STEP 10e: Set the textContent property for each of the above elements (except the UL), based on the JSON content
-
+				img.setAttribute('src', 'https://smccrindle/github.io/comp1073-10/images/' + topFlavors[i].image);
 				// STEP 10f: Build a loop for the ingredients array in the JSON
 
 				// STEP 10g: Append each of the above HTML elements to the ARTICLE element
 
 				// STEP 10h: Append each complete ARTICLE element to the SECTION element
-
+				article.appendChild(img);
+				section.appendChild(article);
+				};
+			};
 
 		// This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
 
