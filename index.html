@@ -38,9 +38,14 @@
 		}
 		/* STEP 9: Build out the populateHeader() function */
 		function populateHeader(jsonObj) {
+			// Grab company name
 			var headerH1 = document.createElement('h1');
 			headerH1.textContent = jsonObj.companyName;
 			header.appendChild(headerH1);
+			// Grab the company location and est. date
+			var headerPara = document.createElement('p');
+			headerPara.textContent = 'Head office: ' + jsonObj.headOffice + ' Est. ' + jsonObj.established;
+			header.appendChild(headerPara);
 		}
 		/* STEP 10a: Assemble the showTopFlavors() function */
 
